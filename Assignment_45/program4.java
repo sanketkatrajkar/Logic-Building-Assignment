@@ -4,27 +4,26 @@
 // Date        :  01/08/2025
 ///////////////////////////////////////////////////////////////////////////////
 /*
- *  Description : Q1   Accetp the number from user and display the Interchanging the 
-                       row and columns of matrix 
-
-                  Q2    Accetp the number from user and display Reverse content of each row. 
+ *  Description : Q4  Accetp the number from user and check wheather matrix is 
+                      Identity or not.
+                       
  */
 
 /*
-         Q 1:   3  2  5  9
-                4  3  2  2
-                8  4  1  5
-                3  9  7  5
+       Input :  1  0  0  0
+                0  1  0  0
+                0  0  1  0
+                0  0  0  1
+
+    Ouptut : TRUE
     
-    Output Q1:  3  4  8  3
+    input    :  3  4  8  3
                 2  3  4  9
                 5  2  1  7
                 9  2  5  5
 
-    Output Q2:  3  4  8  3
-                2  3  4  9
-                5  2  1  7
-                9  2  5  5
+    Ouptut : false
+
 
 */
 import java.util.*;
@@ -37,6 +36,7 @@ class Matrix
    {
        Arr = new int[A][B];
    }
+
 
    public void Accept()
    {
@@ -71,61 +71,41 @@ class Matrix
       }
    }
 
-   public void Transpose()
+   public boolean CheckIdentity()
    {
       int i = 0, j = 0;
 
-      System.out.println("transpose elements are :");
+      if(Arr.length != Arr[0].length)
+      {
+          return false;
+      }
 
       for(i = 0; i < Arr.length; i++)
       {
         for(j = 0; j < Arr[i].length; j++)
         {
-           System.out.print(Arr[j][i]+"\t");
+            if(i == j && Arr[i][j] != 1)
+            {
+                return false;
+            }
+            else if(i != j && Arr[i][j] != 0)
+            {
+                return false;
+            }
         }
-        System.out.println();
       }
-   }
-
-    public void ReverseR()
-   {
-       System.out.println("revers rows are :");
-   
-       int i = 0, j = 0;
-
-       for(i = 0; i < Arr.length; i++)
-       {
-           for(j = Arr[i].length - 1; j >= 0; j--)
-           {
-               System.out.print(Arr[i][j] + "\t");
-           }
-           System.out.println();
-       }
-   }
-
-   public void ReverseCol()
-   {
-       System.out.println("revers Col are :");
-   
-       int i = 0, j = 0;
-
-       for(i = Arr[i].length - 1; i >= 0; i--)
-       {
-           for(j = 0; j < Arr.length; j++)
-           {
-               System.out.print(Arr[i][j] + "\t");
-           }
-           System.out.println();
-       }
-   }
+      
+      return true;
+   } 
 
 }
 
-public class program1
+public class program4
 {
     public static void main(String[] args) 
     {
         Scanner sobj = new Scanner(System.in);
+        boolean bRet = false; 
 
         System.out.println("Enter the number of rows : ");
         int iRow = sobj.nextInt();
@@ -137,9 +117,17 @@ public class program1
 
         mobj.Accept();
         mobj.Display();
-        // mobj.Transpose();
-        // mobj.ReverseR();
-        mobj.ReverseCol();
+        
+        bRet = mobj.CheckIdentity();
+
+        if(bRet == true)
+        {
+            System.out.println("Matrix are Identity");
+        }
+        else
+        {
+            System.out.println("Matrix are not Identity");
+        }
 
     }
 }
