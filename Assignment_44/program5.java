@@ -4,10 +4,7 @@
 // Date        :  01/08/2025
 //////////////////////////////////////////////////////////////////////////////////////////////////
 /*
- *  Description : Q1 :Accept the number  from User and display the addition  of rowwise.
- *                Q2 : Accept the number from User and display the addition  of column wise
- *               Q3 : Accept the number  from User and display Addition of diagonla element
- *               Q4 : Accept the number  from User and display Count the frequecy of Number.
+ *  Description : 
  *               Q5 : Accept the number  from User and display swap the element consecutive row                 
  */
 import java.util.*;
