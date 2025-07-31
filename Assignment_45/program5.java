@@ -4,27 +4,20 @@
 // Date        :  01/08/2025
 ///////////////////////////////////////////////////////////////////////////////
 /*
- *  Description : Q1   Accetp the number from user and display the Interchanging the 
-                       row and columns of matrix 
-
-                  Q2    Accetp the number from user and display Reverse content of each row. 
+ *  Description : Q4  Accetp the number from user and check wheather matrix is 
+ *                    sparse or not
+                       
  */
 
 /*
-         Q 1:   3  2  5  9
-                4  3  2  2
-                8  4  1  5
-                3  9  7  5
-    
-    Output Q1:  3  4  8  3
-                2  3  4  9
-                5  2  1  7
-                9  2  5  5
+       Input :  1  0  0  0
+                0  1  0  0
+                0  0  1  0
+                0  0  0  1
 
-    Output Q2:  3  4  8  3
-                2  3  4  9
-                5  2  1  7
-                9  2  5  5
+    Ouptut : TRUE
+    
+
 
 */
 import java.util.*;
@@ -37,6 +30,7 @@ class Matrix
    {
        Arr = new int[A][B];
    }
+
 
    public void Accept()
    {
@@ -71,61 +65,48 @@ class Matrix
       }
    }
 
-   public void Transpose()
+   public boolean CheckSparse()
    {
-      int i = 0, j = 0;
+      int i = 0, j = 0, iCount1 = 0, iCount2 = 0;
 
-      System.out.println("transpose elements are :");
+      if(Arr.length != Arr[0].length)
+      {
+          return false;
+      }
 
       for(i = 0; i < Arr.length; i++)
       {
         for(j = 0; j < Arr[i].length; j++)
         {
-           System.out.print(Arr[j][i]+"\t");
+            if((Arr[i][j] == 0))
+            {
+                iCount1++;
+            }
+            else if(Arr[i][j] != 0)
+            {
+                iCount2++;
+            }
         }
-        System.out.println();
       }
-   }
 
-    public void ReverseR()
-   {
-       System.out.println("revers rows are :");
-   
-       int i = 0, j = 0;
-
-       for(i = 0; i < Arr.length; i++)
-       {
-           for(j = Arr[i].length - 1; j >= 0; j--)
-           {
-               System.out.print(Arr[i][j] + "\t");
-           }
-           System.out.println();
-       }
-   }
-
-   public void ReverseCol()
-   {
-       System.out.println("revers Col are :");
-   
-       int i = 0, j = 0;
-
-       for(i = Arr[i].length - 1; i >= 0; i--)
-       {
-           for(j = 0; j < Arr.length; j++)
-           {
-               System.out.print(Arr[i][j] + "\t");
-           }
-           System.out.println();
-       }
-   }
+      if(iCount1 > iCount2)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+   } 
 
 }
 
-public class program1
+public class program5
 {
     public static void main(String[] args) 
     {
         Scanner sobj = new Scanner(System.in);
+        boolean bRet = false; 
 
         System.out.println("Enter the number of rows : ");
         int iRow = sobj.nextInt();
@@ -137,9 +118,17 @@ public class program1
 
         mobj.Accept();
         mobj.Display();
-        // mobj.Transpose();
-        // mobj.ReverseR();
-        mobj.ReverseCol();
+        
+        bRet = mobj.CheckSparse();
+
+        if(bRet == true)
+        {
+            System.out.println("Matrix are sparse");
+        }
+        else
+        {
+            System.out.println("Matrix are not sparse");
+        }
 
     }
 }
