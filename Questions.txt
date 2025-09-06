@@ -1,0 +1,14 @@
+                                                                                                             C       CPP       JAVA 
+1] accept the string form the user and check the capital or not  144 code no                          
+2] accept the string form the user and convert int smaller to upper
+   and upper to smaller case.
+3] Accept the string from the user and convert into the smaller to upper case and 
+    upper to smaller case OR Toggle String program
+4] accept the string form the user and Display the digit of the string   
+5] accept the string form the user and count the spaces of the string
+6] accept the string and cout the frequancy of character case sensitve 
+7] accept the string and cout the frequancy of character case sensitve using displacement
+8] accept the string and check the character is present or not
+9] accept the string and check the character is present or not 
+10] accept the string and revers the string in place 
+11] accept teh string and check wheather string is palindrome or not
