@@ -12,3 +12,6 @@
 9] accept the string and check the character is present or not 
 10] accept the string and revers the string in place 
 11] accept teh string and check wheather string is palindrome or not
+12] Accept the string from the user and accept the one character form user 
+    and return the fist occarance of character
+13
