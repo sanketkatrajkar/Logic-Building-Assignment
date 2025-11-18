@@ -1,6 +1,16 @@
 package Assignment_54;
 
-public class program4 
+class ArrayX
 {
+
+}
+public class program4
+{
+    public static void main(String A[])
+    {
+        ArrayX aobj = new ArrayX();
+        
+
+    }
     
 }
