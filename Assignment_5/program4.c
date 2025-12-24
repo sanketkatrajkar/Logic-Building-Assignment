@@ -6,28 +6,29 @@
 // Date        :  23/12/2025
 ///////////////////////////////////////////////////////////////////////////////
 
-// Write the program accept the number from the user and display the Decending order of the factors 
+// Write the program accept the number from the user and display sumation of the non  factors numbers  
 
 /*
-    Input :12
-    Output :6 3 2 1
-
-
+    Input  : 6
+    Output : 9
 */
 
 #include<stdio.h>
 
-void Multi(int No)
+int SumationFactors(int No)
 {
     int iCnt = 0;
+    int iSum = 0;
 
-    for(iCnt = No - 1; iCnt >= 1; iCnt--)
+    for(iCnt = 1; iCnt <= No; iCnt++)
     {
-        if((No % iCnt ) == 0)
+        if((No % iCnt ) != 0)
         {
-           printf("%d ", iCnt);
+           iSum = iSum + iCnt;
         }   
     }
+
+    return iSum;
 }
 
 int main()
@@ -38,7 +39,9 @@ int main()
     printf("Enter the Number : \n");
     scanf("%d" , &iValue);
 
-    Multi(iValue);
+    iRet =  SumationFactors(iValue);
+
+    printf("Sumation is : %d", iRet);
 
     return 0;
 }

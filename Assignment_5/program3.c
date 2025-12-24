@@ -6,13 +6,11 @@
 // Date        :  23/12/2025
 ///////////////////////////////////////////////////////////////////////////////
 
-// Write the program accept the number from the user and display the Decending order of the factors 
+// Write the program accept the number from the user and display the non  factors 
 
 /*
-    Input :12
-    Output :6 3 2 1
-
-
+    Input  : 12
+    Output : 6 3 2 1
 */
 
 #include<stdio.h>
@@ -21,9 +19,9 @@ void Multi(int No)
 {
     int iCnt = 0;
 
-    for(iCnt = No - 1; iCnt >= 1; iCnt--)
+    for(iCnt = No; iCnt >= 1; iCnt--)
     {
-        if((No % iCnt ) == 0)
+        if((No % iCnt ) != 0)
         {
            printf("%d ", iCnt);
         }   
