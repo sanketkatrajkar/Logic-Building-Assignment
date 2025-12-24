@@ -1,5 +1,6 @@
 package Assignment_57;
 
-public class program2 {
+public class program2 
+{
     
 }

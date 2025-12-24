@@ -28,7 +28,11 @@ public class program4
         ArrayX aobj = new ArrayX();
 
         Scanner sobj = new Scanner(System.in);
-        char Arr[] = new char[5];
+
+        System.out.println("Enter size of the characters :");
+        char ch = sobj.next().charAt(0);
+
+        char Arr[] = new char[ch];
 
         System.out.println("Enter characters (50 characters):");
 
