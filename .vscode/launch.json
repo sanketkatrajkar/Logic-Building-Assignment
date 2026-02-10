@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/sanke/Desktop/LB_Assignment/Assignment_22",
-      "program": "c:/Users/sanke/Desktop/LB_Assignment/Assignment_22/build/Debug/outDebug",
+      "cwd": "c:/Users/sanke/Desktop/LB_Assignment/Assignment_05",
+      "program": "c:/Users/sanke/Desktop/LB_Assignment/Assignment_05/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
