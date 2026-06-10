@@ -30,6 +30,11 @@ using namespace std;
 bool isAnagram(string &str1, string &str2)
 {
     int arr[26] = {0};
+
+    if(str1.legnth() != str2.legnth())
+    {
+        return false;
+    }
     
     for(int i = 0; i < str1.length(); i++)
     {
