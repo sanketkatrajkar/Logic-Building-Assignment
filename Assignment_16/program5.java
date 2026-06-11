@@ -41,8 +41,7 @@ class Pattern
                else
                {
                 System.out.print(j+"\t");
-               }
-               
+               } 
             }
 
             System.out.println();

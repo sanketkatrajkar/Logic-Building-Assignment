@@ -27,32 +27,37 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
 
-#define true 1
-#define false 0
 
-typedef int BOOL;
+// #define true 1
+// #define false 0
+
+// typedef int BOOL;
 
 bool check(int Arr[], int iLength)
 {
     int iCnt = 0;
+    bool bflag = false;
 
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
         if(Arr[iCnt] == 11)
         {
-            return true;
+            bflag =  true;
+            return bflag;
         }
 
     }
-    return false;
+    return bflag;
 
 }
 
 int main()
 {
-    int iLength = 0, iCnt = 0, iRet = 0;
+    int iLength = 0, iCnt = 0;
     int *ptr = NULL;
+    bool bflag = false;
 
     printf("Enter the number of elements : \n");
     scanf("%d",&iLength);
@@ -72,15 +77,15 @@ int main()
         scanf("%d",&ptr[iCnt]);
     }
 
-    iRet = check(ptr,iLength);
+    bflag = check(ptr,iLength);
 
-    if(iRet == true)
+    if(bflag == true)
     {
-        printf("11 is present\n",iRet);
+        printf("11 is present\n");
     }
     else
     {
-        printf("11 not present\n",iRet);
+        printf("11 not present\n");
 
     }
 

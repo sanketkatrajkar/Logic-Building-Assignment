@@ -31,7 +31,7 @@ bool isAnagram(string &str1, string &str2)
 {
     int arr[26] = {0};
 
-    if(str1.legnth() != str2.legnth())
+    if(str1.size() != str2.size())
     {
         return false;
     }
@@ -80,6 +80,8 @@ int main()
     {
         cout << "Not Anagram " << endl;
     }
+
+    printf("cpp madhe c cha code run hoto ");
 
     return 0;
 }

@@ -11,7 +11,7 @@
     Output :1
 
     Input : 1018
-    Output :2
+    Output :21
 
     Input : 8462
     Output :4

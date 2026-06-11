@@ -11,7 +11,7 @@
              1 2 3 4 5 
              a b c d e 
              1 2 3 4 5 
-             a b c d e                             
+             a b c d e
 */
 
 #include<stdio.h>

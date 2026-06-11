@@ -58,7 +58,7 @@ void CountFrequency(string &str)
     {
         if(freqLower[j] > 0)
         {
-            cout << (char)(j + 'a') << " -> " << freqLower[j] << endl;
+            cout << (char)(j + 'a')<< " -> " << freqLower[j] << endl;
         }
     }
 }
@@ -117,3 +117,5 @@ int main()
 
 //     return 0;
 // }
+
+

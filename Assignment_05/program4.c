@@ -20,9 +20,9 @@ int SumationFactors(int No)
     int iCnt = 0;
     int iSum = 0;
 
-    for(iCnt = 1; iCnt <= No; iCnt++)
+    for(iCnt = 1; iCnt < No; iCnt++)
     {
-        if((No % iCnt ) != 0)
+        if((No % iCnt ) == 0)
         {
            iSum = iSum + iCnt;
         }   

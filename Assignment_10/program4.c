@@ -27,10 +27,12 @@ int MultDigits(int iNo)
     while(iNo != 0)
     {
         iDigit = iNo % 10;
+
         if(iDigit != 0)
         {
-        iMul = iMul * iDigit;
+          iMul = iMul * iDigit;
         }
+        
         iNo = iNo / 10;
     }
 
